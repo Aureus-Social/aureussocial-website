@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Module Optimisation Fiscale & Sociale — Aureus Social Pro</title>
+<meta name="description" content="Le module phare d'Aureus Social Pro : 10 leviers de récupération de charges sociales et fiscales détectés automatiquement. Audit rétroactif 3 ans. Commission 20% sur récupéré.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+
+<style>
+.detail-hero {
+  padding-top: 160px;
+  padding-bottom: 90px;
+  background: radial-gradient(ellipse at top right, rgba(212, 168, 87, .1), transparent 60%), var(--bg);
+}
+
+.detail-hero h1 {
+  font-size: clamp(2.4rem, 5.5vw, 4.8rem);
+  margin-bottom: 24px;
+}
+
+.lever-detail {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 60px;
+  padding: 56px 0;
+  border-bottom: 1px solid var(--line-2);
+  align-items: start;
+}
+
+.lever-detail:last-child { border-bottom: none; }
+
+.lever-num {
+  font-family: 'Fraunces', serif;
+  font-size: 5.5rem;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 14px;
+  font-style: italic;
+  letter-spacing: -.04em;
+}
+
+.lever-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.lever-icon-big {
+  font-size: 2.2rem;
+}
+
+.lever-tag {
+  display: inline-block;
+  background: var(--gold-glow);
+  border: 1px solid var(--line);
+  color: var(--gold);
+  padding: 5px 11px;
+  border-radius: 4px;
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  font-family: 'Inter', sans-serif;
+}
+
+.lever-detail h3 em { font-style: italic; color: var(--gold); }
+
+.lever-body { color: var(--ink-2); font-size: 1.04rem; line-height: 1.7; }
+.lever-body p { margin-bottom: 18px; }
+.lever-body strong { color: var(--ink); }
+
+.lever-figures {
+  background: var(--bg-2);
+  border: 1px solid var(--line-2);
+  border-radius: var(--radius);
+  padding: 18px 22px;
+  margin-top: 16px;
+  font-size: .92rem;
+}
+
+.lever-figures-label {
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+
+.lever-figures-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 14px;
+}
+
+.lever-fig {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.lever-fig-num {
+  font-family: 'Fraunces', serif;
+  font-size: 1.4rem;
+  color: var(--ink);
+  font-weight: 500;
+}
+.lever-fig-label {
+  font-size: .78rem;
+  color: var(--ink-3);
+}
+
+.argbox {
+  background: linear-gradient(135deg, rgba(212, 168, 87, .04), var(--bg-card));
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  margin: 50px 0;
+  text-align: center;
+}
+
+.argbox-num {
+  font-family: 'Fraunces', serif;
+  font-size: 3.2rem;
+  color: var(--gold);
+  font-weight: 500;
+  letter-spacing: -.02em;
+  margin-bottom: 6px;
+}
+
+.argbox p { color: var(--ink-2); font-size: 1.04rem; max-width: 680px; margin: 0 auto; }
+
+@media (max-width: 880px) {
+  .lever-detail { grid-template-columns: 1fr; gap: 30px; }
+  .lever-num { font-size: 4rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ NAV ═══ -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark">A</span>
+      <span>Aureus Social Pro <small>BE</small></span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Accueil</a>
+      <a href="index.html#fonctionnalites">Fonctionnalités</a>
+      <a href="#leviers">Les 10 leviers</a>
+      <a href="#faq">Questions</a>
+      <a href="https://app.aureussocial.be" class="nav-cta">Démarrer</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section class="detail-hero">
+  <div class="container">
+    <span class="eyebrow" data-reveal>★ Le module phare d'Aureus Social Pro</span>
+    <h1 class="serif" data-reveal data-delay="1">
+      Le moteur qui surveille en continu<br>
+      <em>10 réductions de charges</em><br>
+      oubliées par votre secrétariat.
+    </h1>
+    <p class="lead" data-reveal data-delay="2" style="font-size: 1.22rem; max-width: 800px; margin-top: 20px;">
+      Précompte professionnel, ONSS catégoriel, aides régionales, Maribel social, Werkbonus, Outplacement, Pension complémentaire... Chaque trimestre, des montants importants restent chez vos clients faute d'avoir été détectés à temps. Aureus Social Pro intègre un moteur qui les identifie automatiquement et les applique via DmfA modificatives et formulaires officiels.
+    </p>
+    <div class="hero-actions" data-reveal data-delay="3" style="margin-top: 36px;">
+      <a href="https://app.aureussocial.be" class="btn btn-gold btn-arrow btn-lg">Lancer un audit gratuit</a>
+      <a href="#leviers" class="btn btn-ghost btn-arrow btn-lg">Voir les 10 leviers</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ARGBOX 156k€ ═══ -->
+<section style="padding: 60px 0;">
+  <div class="container">
+    <div class="argbox" data-reveal>
+      <div class="argbox-num">~ 156 000 € / an</div>
+      <p>C'est le potentiel moyen de récupération sur 3 ans pour une PME belge de 10 employés. La majorité de ce montant n'a jamais été activé par le secrétariat social en place. Le module Aureus le détecte en continu et le remonte automatiquement.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ LES 10 LEVIERS DÉTAILLÉS ═══ -->
+<section id="leviers">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow" data-reveal>Les dix leviers, un par un</span>
+      <h2 class="serif" data-reveal data-delay="1">Chaque levier <em>documenté</em>, chaque chiffre <em>sourcé</em>.</h2>
+      <p class="lead" data-reveal data-delay="2" style="margin: 18px auto 0;">Toutes les bases légales sont synchronisées avec le Moniteur belge et tenues à jour Q2 2026. Si une loi change, le moteur intègre la nouvelle valeur automatiquement.</p>
+    </div>
+
+    <!-- 01 -->
+    <div class="lever-detail" data-reveal>
+      <div>
+        <div class="lever-num">01</div>
+        <div class="lever-meta">
+          <span class="lever-icon-big">🎯</span>
+          <span class="lever-tag">CIR92 art. 275/1 à 275/8</span>
+        </div>
+      </div>
+      <div>
+        <h3 class="serif">Dispenses précompte <em>professionnel</em></h3>
+        <div class="lever-body">
+          <p>Sept dispenses différentes selon votre activité. Si vos collaborateurs travaillent en équipe ou de nuit, sur chantier, en R&D, font des heures supplémentaires, ou si votre entreprise est jeune ou maritime — vous pouvez retenir une partie du précompte au lieu de le verser au SPF Finances.</p>
+          <p>Récupération rétroactive jusqu'à <strong>3 ans</strong> via formulaire 274.XX modificatif (Art. 358 CIR92).</p>
+          <div class="lever-figures">
+            <div class="lever-figures-label">Taux Q2 2026</div>
+            <div class="lever-figures-grid">
+              <div class="lever-fig"><span class="lever-fig-num">22,8 %</span><span class="lever-fig-label">Travail nuit / équipe</span></div>
+              <div class="lever-fig"><span class="lever-fig-num">18 %</span><span class="lever-fig-label">Travaux immobiliers</span></div>
+              <div class="lever-fig"><span class="lever-fig-num">80 %</span><span class="lever-fig-label">R&D chercheurs Master/PhD</span></div>
+              <div class="lever-fig"><span class="lever-fig-num">32,19 %</span><span class="lever-fig-label">Heures supplémentaires</span></div>
+              <div class="lever-fig"><span class="lever-fig-num">10 à 20 %</span><span class="lever-fig-label">Jeunes entreprises / start-ups</span></div>
+              <div class="lever-fig"><span class="lever-fig-num">80 %</span><span class="lever-fig-label">Sportifs jeunes (&lt;26 ans)</span></div>
+              <div class="lever-fig"><span class="lever-fig-num">100 %</span><span class="lever-fig-label">Marine marchande / dragage</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 02 -->
+    <div class="lever-detail" data-reveal>
+      <div>
+        <div class="lever-num">02</div>
+        <div class="lever-meta">
+          <span class="lever-icon-big">💰</span>
+          <span class="lever-tag">AR 17/01/2000</span>
+        </div>
+      </div>
+      <div>
+        <h3 class="serif">Récupération ONSS <em>rétroactive</em></h3>
+        <div class="lever-body">
+          <p>Réductions catégorielles ONSS souvent oubliées par les anciens secrétariats : premier engagement, jeunes peu qualifiés, travailleurs âgés, chômeurs longue durée, article 60 §7 CPAS, secteur HORECA, structurelle.</p>
+          <p>Application via <strong>DmfA modificative</strong> — soumission directe à l'ONSS. Délai retour 1 à 2 mois.</p>
+          <div class="lever-figures">
+            <div class="lever-figures-label">Forfaits trimestriels Q2 2026</div>
+            <div class="lever-figures-grid">
+              <div class="lever-fig"><span class="lever-fig-num">199,06 €</span><span class="lever-fig-label">Premier engagement T1</span></div>
+              <div class="lever-fig"><span class="lever-fig-num">100 €</span><span class="lever-fig-label">Premier engagement T2-T3</span></div>
+              <div class="lever-fig"><span class="lever-fig-num">1 500 €</span><span class="lever-fig-label">Travailleurs âgés (≥55)</span></div>
+              <div class="lever-fig"><span class="lever-fig-num">1 500 €</span><span class="lever-fig-label">Jeunes peu qualifiés (&lt;25)</span></div>
+              <div class="lever-fig"><span class="lever-fig-num">1 500 €</span><span class="lever-fig-label">Travailleurs handicapés</span></div>
+              <div class="lever-fig"><span class="lever-fig-num">361,64 €</span><span class="lever-fig-label">Réduction structurelle</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 03 -->
+    <div class="lever-detail" data-reveal>
+      <div>
+        <div class="lever-num">03</div>
+        <div class="lever-meta">
+          <span class="lever-icon-big">💎</span>
+          <span class="lever-tag">AR 17/01/2000 art. 2</span>
+        </div>
+      </div>
+      <div>
+        <h3 class="serif">Werkbonus <em>(bas salaires)</em></h3>
+        <div class="lever-body">
+          <p>Réduction de la cotisation personnelle ONSS pour les bas salaires. Calcul automatique sur chaque fiche Aureus, application directe sur le bulletin de paie.</p>
+          <div class="lever-figures">
+            <div class="lever-figures-label">Plafonds Q2 2026</div>
+            <div class="lever-figures-grid">
+              <div class="lever-fig"><span class="lever-fig-num">2 561,42 €</span><span class="lever-fig-label">Seuil S0 (réduction max)</span></div>
+              <div class="lever-fig"><span class="lever-fig-num">2 997,59 €</span><span class="lever-fig-label">Seuil S1 (extinction)</span></div>
+              <div class="lever-fig"><span class="lever-fig-num">282,37 €</span><span class="lever-fig-label">Réduction max / mois</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 04 -->
+    <div class="lever-detail" data-reveal>
+      <div>
+        <div class="lever-num">04</div>
+        <div class="lever-meta">
+          <span class="lever-icon-big">🏥</span>
+          <span class="lever-tag">AR 18/07/2002</span>
+        </div>
+      </div>
+      <div>
+        <h3 class="serif">Maribel <em>Social</em></h3>
+        <div class="lever-body">
+          <p>Réduction trimestrielle pour les secteurs <strong>non-marchands</strong>, affectée au Fonds Maribel pour création d'emploi. Concerne notamment les CP <strong>318, 319, 329, 330, 331, 332, 337</strong> et le secteur public sans but lucratif.</p>
+          <div class="lever-figures">
+            <div class="lever-figures-label">Forfait Q2 2026</div>
+            <div class="lever-figures-grid">
+              <div class="lever-fig"><span class="lever-fig-num">507,39 €</span><span class="lever-fig-label">Par trimestre, par ETP</span></div>
+              <div class="lever-fig"><span class="lever-fig-num">≥ 50 %</span><span class="lever-fig-label">Seuil d'occupation requis</span></div>
+              <div class="lever-fig"><span class="lever-fig-num">9 CP</span><span class="lever-fig-label">Éligibilité non-marchand</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 05 -->
+    <div class="lever-detail" data-reveal>
+      <div>
+        <div class="lever-num">05</div>
+        <div class="lever-meta">
+          <span class="lever-icon-big">🇧🇪</span>
+          <span class="lever-tag">Décret Wallonie 1998 réformé 2022</span>
+        </div>
+      </div>
+      <div>
+        <h3 class="serif">Aides régionales <em>Wallonnes (Forem)</em></h3>
+        <div class="lever-body">
+          <p>SESAM (Soutien à l'Emploi en Secteur Marchand), Tremplin Indépendant, PFI (Plan Formation Insertion), Impulsion -25 ans / 12 mois+ / 55+, Allocation de travail.</p>
+          <div class="lever-figures">
+            <div class="lever-figures-label">Plafonds annuels Q2 2026</div>
+            <div class="lever-figures-grid">
+              <div class="lever-fig"><span class="lever-fig-num">25 000 €</span><span class="lever-fig-label">SESAM (sur 36 mois)</span></div>
+              <div class="lever-fig"><span class="lever-fig-num">10 800 €</span><span class="lever-fig-label">Tremplin (sur 36 mois)</span></div>
+              <div class="lever-fig"><span class="lever-fig-num">500 € / mois</span><span class="lever-fig-label">Impulsion -25 / 12mois+</span></div>
+              <div class="lever-fig"><span class="lever-fig-num">1 000 € / mois</span><span class="lever-fig-label">Impulsion 55+</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 06 -->
+    <div class="lever-detail" data-reveal>
+      <div>
+        <div class="lever-num">06</div>
+        <div class="lever-meta">
+          <span class="lever-icon-big">🇧🇪</span>
+          <span class="lever-tag">Decreet Vlaanderen Werk</span>
+        </div>
+      </div>
+      <div>
+        <h3 class="serif">Aides régionales <em>Flamandes (VDAB)</em></h3>
+        <div class="lever-body">
+          <p>VOP (Vlaamse Ondersteuningspremie pour travailleurs handicapés), Aanwervingsincentive 55+, IBO (Individuele Beroepsopleiding) formation rémunérée, Doelgroepvermindering, Transitiepremie 45+, KMO-portefeuille.</p>
+          <div class="lever-figures">
+            <div class="lever-figures-label">Plafonds Q2 2026</div>
+            <div class="lever-figures-grid">
+              <div class="lever-fig"><span class="lever-fig-num">18 000 € / an</span><span class="lever-fig-label">VOP (sur 5 ans)</span></div>
+              <div class="lever-fig"><span class="lever-fig-num">1 150-1 800 €</span><span class="lever-fig-label">Aanwerving 55+ /trim (8 trim)</span></div>
+              <div class="lever-fig"><span class="lever-fig-num">7 500 € / an</span><span class="lever-fig-label">KMO-portefeuille (30%)</span></div>
+              <div class="lever-fig"><span class="lever-fig-num">1 500 € / an</span><span class="lever-fig-label">Transitiepremie 45+ (3 ans)</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 07 -->
+    <div class="lever-detail" data-reveal>
+      <div>
+        <div class="lever-num">07</div>
+        <div class="lever-meta">
+          <span class="lever-icon-big">👴</span>
+          <span class="lever-tag">AR 01/07/2006 SPF Emploi</span>
+        </div>
+      </div>
+      <div>
+        <h3 class="serif">Fonds Expérience <em>Professionnelle 50+</em></h3>
+        <div class="lever-body">
+          <p>Subsides pour maintenir vos travailleurs de 50 ans et plus dans l'emploi. Cofinancement employeur + Fonds.</p>
+          <div class="lever-figures">
+            <div class="lever-figures-label">Subsides disponibles Q2 2026</div>
+            <div class="lever-figures-grid">
+              <div class="lever-fig"><span class="lever-fig-num">jusqu'à 80 %</span><span class="lever-fig-label">Aménagement poste (max 8 000 €)</span></div>
+              <div class="lever-fig"><span class="lever-fig-num">500 € / mois</span><span class="lever-fig-label">Tutorat 50+ (max 6 000 €)</span></div>
+              <div class="lever-fig"><span class="lever-fig-num">jusqu'à 70 %</span><span class="lever-fig-label">Formation 50+ (max 3 000 €)</span></div>
+              <div class="lever-fig"><span class="lever-fig-num">100 %</span><span class="lever-fig-label">Audit "âge management" (5 000 €)</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 08 -->
+    <div class="lever-detail" data-reveal>
+      <div>
+        <div class="lever-num">08</div>
+        <div class="lever-meta">
+          <span class="lever-icon-big">👋</span>
+          <span class="lever-tag">CCT 82bis du CNT</span>
+        </div>
+      </div>
+      <div>
+        <h3 class="serif">Outplacement <em>45 ans et plus</em></h3>
+        <div class="lever-body">
+          <p>Obligation post-licenciement pour les travailleurs de 45 ans ou plus. Levier de <strong>conformité</strong> plus que d'optimisation, mais critique : le non-respect coûte 1 800 € de sanction par cas + une cotisation ONSS spéciale supplémentaire.</p>
+          <div class="lever-figures">
+            <div class="lever-figures-label">Cadre légal Q2 2026</div>
+            <div class="lever-figures-grid">
+              <div class="lever-fig"><span class="lever-fig-num">1 800 €</span><span class="lever-fig-label">Forfait minimum employeur</span></div>
+              <div class="lever-fig"><span class="lever-fig-num">60 h</span><span class="lever-fig-label">Programme sur 12 mois</span></div>
+              <div class="lever-fig"><span class="lever-fig-num">1 800 €</span><span class="lever-fig-label">Sanction si non-respect</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 09 -->
+    <div class="lever-detail" data-reveal>
+      <div>
+        <div class="lever-num">09</div>
+        <div class="lever-meta">
+          <span class="lever-icon-big">🎁</span>
+          <span class="lever-tag">LPC 28/04/2003</span>
+        </div>
+      </div>
+      <div>
+        <h3 class="serif">Pension complémentaire <em>2e pilier</em></h3>
+        <div class="lever-body">
+          <p>Plan d'entreprise (employés) ou EIP (dirigeants). Outil de fidélisation cadres et avantage fiscal employeur. Aureus suit le plafond Wijninckx pour éviter la cotisation spéciale de dépassement.</p>
+          <div class="lever-figures">
+            <div class="lever-figures-label">Paramètres fiscaux Q2 2026</div>
+            <div class="lever-figures-grid">
+              <div class="lever-fig"><span class="lever-fig-num">80 %</span><span class="lever-fig-label">Déduction frais professionnels</span></div>
+              <div class="lever-fig"><span class="lever-fig-num">4,4 %</span><span class="lever-fig-label">ATN employé sur cotisations</span></div>
+              <div class="lever-fig"><span class="lever-fig-num">36 886,16 €</span><span class="lever-fig-label">Plafond Wijninckx 2026</span></div>
+              <div class="lever-fig"><span class="lever-fig-num">3 %</span><span class="lever-fig-label">Cotisation spéciale dépassement</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 10 -->
+    <div class="lever-detail" data-reveal>
+      <div>
+        <div class="lever-num">10</div>
+        <div class="lever-meta">
+          <span class="lever-icon-big">🛡️</span>
+          <span class="lever-tag">Loi 27/06/1969 + AR contrôles</span>
+        </div>
+      </div>
+      <div>
+        <h3 class="serif">Support contrôle <em>ONSS / SPF Finances</em></h3>
+        <div class="lever-body">
+          <p>Quand l'inspecteur ONSS débarque, Aureus génère votre <strong>dossier de défense en PDF</strong> (pièces justificatives, sources légales, calculs détaillés), prépare les questions / réponses argumentées via agent IA, et coordonne avec un avocat partenaire en cas d'escalade. Un redressement ONSS coûte typiquement 50 000 à 100 000 € — la prévention vaut tout l'investissement.</p>
+          <div class="lever-figures">
+            <div class="lever-figures-label">Outils inclus</div>
+            <div class="lever-figures-grid">
+              <div class="lever-fig"><span class="lever-fig-num">10 articles</span><span class="lever-fig-label">CIR92 + AR ONSS indexés</span></div>
+              <div class="lever-fig"><span class="lever-fig-num">5 questions types</span><span class="lever-fig-label">Avec réponses pré-rédigées</span></div>
+              <div class="lever-fig"><span class="lever-fig-num">PDF auto</span><span class="lever-fig-label">Dossier complet généré</span></div>
+              <div class="lever-fig"><span class="lever-fig-num">Avocat</span><span class="lever-fig-label">Partenaire en escalade</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ FAQ ═══ -->
+<section id="faq" class="killer">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow" data-reveal>Questions fréquentes sur le module</span>
+      <h2 class="serif" data-reveal data-delay="1">Les réponses <em>directes</em>.</h2>
+    </div>
+
+    <div class="faq-grid">
+      <details class="faq-item" data-reveal>
+        <summary>Comment l'audit gratuit fonctionne-t-il concrètement ?</summary>
+        <div class="faq-body">
+          Vous nous transmettez vos DmfA et fiches de paie des 12 derniers trimestres (l'export de votre secrétariat actuel suffit). Le moteur Aureus scanne les données et détecte automatiquement chaque levier applicable selon les CP, âges, salaires, et situations. Vous recevez un rapport PDF chiffré sous 5 jours ouvrables. <strong>Aucun engagement avant validation par vous.</strong>
+        </div>
+      </details>
+
+      <details class="faq-item" data-reveal>
+        <summary>Et si on découvre 0 € à récupérer ?</summary>
+        <div class="faq-body">
+          C'est rare mais ça arrive (entreprises déjà très bien optimisées). Dans ce cas : pas de commission, vous restez sur les 29 €/fiche standards et bénéficiez en continu du moteur de surveillance pour le futur. Dès qu'un changement (nouvel embauche, modification de CP, nouveau dispositif légal) crée une opportunité, vous êtes alerté.
+        </div>
+      </details>
+
+      <details class="faq-item" data-reveal>
+        <summary>Vous facturez les 20 % avant ou après réception du cash ?</summary>
+        <div class="faq-body">
+          <strong>Après réception effective</strong> sur le compte du client. La facture Aureus est émise une fois le virement ONSS / SPF Finances reçu, pas avant. Cela garantit que vous ne payez que sur résultat tangible.
+        </div>
+      </details>
+
+      <details class="faq-item" data-reveal>
+        <summary>Le formulaire 274 est-il généré automatiquement ?</summary>
+        <div class="faq-body">
+          La <strong>v1 actuelle</strong> génère un rapport PDF complet à présenter au client avec tous les éléments nécessaires à la déclaration manuelle. La <strong>v2 prévue</strong> intégrera la génération auto du formulaire 274.XX au format SPF Finances avec pré-remplissage et soumission via portail Finprof. Sprint en cours.
+        </div>
+      </details>
+
+      <details class="faq-item" data-reveal>
+        <summary>Que se passe-t-il si l'ONSS conteste une réduction appliquée ?</summary>
+        <div class="faq-body">
+          Le levier 10 (Support Contrôle ONSS) est précisément conçu pour ça. Aureus a constitué le dossier complet en amont — sources légales, justificatifs, calculs détaillés. En cas de contestation, vous avez tous les éléments pour répondre. En cas d'escalade, notre avocat partenaire intervient. Cette protection est <strong>absente chez les cabinets de récupération externes</strong>.
+        </div>
+      </details>
+
+      <details class="faq-item" data-reveal>
+        <summary>Est-ce que les fiduciaires peuvent partager la commission avec leurs clients ?</summary>
+        <div class="faq-body">
+          Oui. En mode fiduciaire, le contrat permet un <strong>revenue share</strong> où vous facturez vous-même votre client final et reversez la part Aureus. C'est un argument commercial puissant pour fidéliser ou capter de nouveaux clients PME.
+        </div>
+      </details>
+
+      <details class="faq-item" data-reveal>
+        <summary>Combien de leviers sont activés en moyenne par PME ?</summary>
+        <div class="faq-body">
+          Sur les 10 leviers, une PME standard en active typiquement <strong>3 à 6</strong> selon son profil (CP, âges, taille, région). Une entreprise non-marchande ou industrielle en active souvent plus. Le Hub Optimisation calcule un <strong>score sur 100</strong> pour visualiser le niveau d'activation.
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CTA FINAL ═══ -->
+<section class="cta-final">
+  <div class="container" style="position: relative; z-index: 2;">
+    <span class="eyebrow" data-reveal>Le potentiel dort. Aureus le réveille.</span>
+    <h2 class="serif" data-reveal data-delay="1">Audit <em>gratuit</em> sur 3 ans.<br>Réponse PDF sous <em>5 jours</em>.</h2>
+    <p class="lead" data-reveal data-delay="2">Aucun engagement avant validation. Vos données sont supprimées si vous décidez de ne pas continuer.</p>
+    <div class="hero-actions" style="justify-content: center;" data-reveal data-delay="3">
+      <a href="https://app.aureussocial.be" class="btn btn-gold btn-arrow btn-lg">Démarrer l'audit gratuit</a>
+      <a href="mailto:info@aureus-ia.com?subject=Démo%20module%20Optimisation" class="btn btn-ghost btn-arrow btn-lg">Demander une démo</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <a href="index.html" class="logo" style="margin-bottom: 18px;">
+          <span class="logo-mark">A</span>
+          <span>Aureus Social Pro <small>BE</small></span>
+        </a>
+        <p style="margin-top: 18px;">
+          <strong style="color: var(--ink);">Aureus IA SPRL</strong><br>
+          BCE BE 1028.230.781<br>
+          Sq. Eugène Plasky 92-94 bte 11<br>
+          1030 Schaerbeek, Belgique<br><br>
+          <strong style="color: var(--ink);">Validé prestataire ONSS niveau 2</strong><br>
+          Matricule ONSS 66999-83
+        </p>
+      </div>
+      <div class="footer-col">
+        <h5>Aureus Social Pro</h5>
+        <ul>
+          <li><a href="index.html#fonctionnalites">Fonctionnalités</a></li>
+          <li><a href="optimisation.html">Module Optimisation ⭐</a></li>
+          <li><a href="index.html#fiduciaires">Pour fiduciaires</a></li>
+          <li><a href="index.html#tarifs">Tarifs</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Société</h5>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="mailto:info@aureus-ia.com">Contact</a></li>
+          <li><a href="https://app.aureussocial.be">Lancer l'app</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="mailto:info@aureus-ia.com">info@aureus-ia.com</a></li>
+          <li><a href="https://app.aureussocial.be">app.aureussocial.be</a></li>
+          <li><span style="color: var(--ink-3); font-size: .9rem;">Bruxelles · Belgique</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>© 2026 Aureus IA SPRL · Tous droits réservés</div>
+      <div>Conçu et développé à Bruxelles · Hébergé en Europe</div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/script.js"></script>
+</body>
+</html>
