@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Early Access — Aureus Social Pro · 1.000 employeurs pionniers</title>
+<meta name="description" content="Rejoignez la nouvelle génération de la paie belge. Aureus Social Pro · Conçu à partir de l'audit de 250 entreprises belges. Les 1.000 premières inscriptions bénéficient de primes exclusives — frais d'inscription offerts et jusqu'à 4 mois gratuits.">
+<meta name="keywords" content="early access, paie belge, secrétariat social, Aureus Social Pro, 1000 employeurs pionniers, optimisation fiscale">
+<meta property="og:title" content="Early Access — Aureus Social Pro · 1.000 employeurs pionniers">
+<meta property="og:description" content="Conçu à partir de l'audit de 250 entreprises belges. Frais offerts + jusqu'à 4 mois gratuits pour les 1.000 premières inscriptions.">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+
+<style>
+  /* ═══ EARLY ACCESS — Page-specific styles ═══ */
+  .ea-hero { padding:90px 0 50px 0; text-align:center; position:relative; overflow:hidden; }
+  .ea-hero::before { content:""; position:absolute; top:0; left:50%; transform:translateX(-50%); width:80%; max-width:800px; height:400px; background:radial-gradient(ellipse at center, var(--gold-glow) 0%, transparent 60%); pointer-events:none; z-index:0; }
+  .ea-hero-inner { position:relative; z-index:1; max-width:880px; margin:0 auto; padding:0 24px; }
+  .ea-eyebrow { display:inline-block; padding:8px 18px; border-radius:99px; font-family:Inter,sans-serif; font-size:.72rem; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:var(--gold); border:1px solid var(--line); background:var(--gold-glow); margin-bottom:24px; }
+  .ea-h1 { font-family:'Fraunces',serif; font-weight:500; line-height:1.08; letter-spacing:-.018em; font-size:clamp(2.4rem, 5.5vw, 4.6rem); margin-bottom:24px; }
+  .ea-h1 em { color:var(--gold); font-style:italic; }
+  .ea-sub { font-size:clamp(1rem, 1.5vw, 1.15rem); color:var(--ink-2); line-height:1.65; max-width:680px; margin:0 auto; }
+  .ea-sub strong { color:var(--ink); font-weight:600; }
+
+  .ea-counter { display:inline-flex; align-items:center; gap:14px; margin-top:32px; padding:14px 22px; background:var(--bg-card); border:1px solid var(--line); border-radius:99px; }
+  .ea-counter-dot { width:10px; height:10px; border-radius:50%; background:var(--green); box-shadow:0 0 12px var(--green); animation:pulse 2s infinite; }
+  @keyframes pulse { 0%,100%{opacity:1;} 50%{opacity:.4;} }
+  .ea-counter-text { font-family:Inter,sans-serif; font-size:.9rem; color:var(--ink-2); }
+  .ea-counter-text strong { color:var(--gold); font-weight:700; font-feature-settings:"tnum"; }
+
+  .ea-section { padding:60px 24px; max-width:1100px; margin:0 auto; }
+  .ea-section-title { text-align:center; margin-bottom:40px; }
+  .ea-section-title .eyebrow { margin-bottom:14px; }
+  .ea-section-title h2 { font-size:clamp(1.8rem, 3.5vw, 2.8rem); margin-bottom:12px; }
+  .ea-section-title p { color:var(--ink-2); max-width:640px; margin:0 auto; line-height:1.65; }
+
+  /* Deadline banner */
+  .ea-deadline { display:flex; gap:16px; align-items:flex-start; padding:18px 24px; background:linear-gradient(135deg, rgba(239,77,77,.10) 0%, rgba(212,168,87,.06) 100%); border:1px solid rgba(239,77,77,.3); border-radius:var(--radius-lg); margin:0 auto 28px auto; max-width:1100px; }
+  .ea-deadline-icon { font-size:24px; flex-shrink:0; }
+  .ea-deadline-text { font-size:.95rem; line-height:1.55; color:var(--ink); }
+  .ea-deadline-text strong { color:#fca5a5; }
+  .ea-deadline-date { color:var(--gold); font-weight:700; }
+
+  /* Reflection box */
+  .ea-reflection { display:flex; gap:16px; align-items:flex-start; padding:18px 24px; background:linear-gradient(135deg, rgba(52,199,123,.10) 0%, rgba(52,199,123,.03) 100%); border:1px solid rgba(52,199,123,.3); border-radius:var(--radius-lg); margin:0 auto 40px auto; max-width:1100px; }
+  .ea-reflection-icon { font-size:26px; flex-shrink:0; }
+  .ea-reflection-text { font-size:.95rem; line-height:1.6; color:var(--ink); }
+  .ea-reflection-text strong { color:#86efac; }
+
+  /* Process 4 steps */
+  .ea-process { background:var(--bg-2); border:1px solid var(--line-2); border-radius:var(--radius-lg); padding:32px 24px; margin-bottom:48px; }
+  .ea-steps { display:grid; grid-template-columns:1fr; gap:14px; margin-top:28px; }
+  @media(min-width:768px){ .ea-steps { grid-template-columns:repeat(4,1fr); gap:12px; } }
+  .ea-step { padding:18px; background:var(--bg); border:1px solid var(--line-2); border-radius:var(--radius); position:relative; }
+  .ea-step.highlight { border-color:rgba(52,199,123,.4); background:rgba(52,199,123,.04); }
+  .ea-step-num { width:34px; height:34px; border-radius:50%; background:var(--gold); color:var(--bg); display:flex; align-items:center; justify-content:center; font-weight:700; font-family:Inter,sans-serif; font-size:.95rem; margin-bottom:12px; }
+  .ea-step.highlight .ea-step-num { background:var(--green); }
+  .ea-step h4 { font-family:Inter,sans-serif; font-size:.95rem; font-weight:700; margin-bottom:6px; line-height:1.3; }
+  .ea-step p { font-size:.85rem; color:var(--ink-2); line-height:1.55; margin:0 0 8px 0; }
+  .ea-step-time { display:inline-block; font-size:.7rem; padding:3px 9px; border-radius:99px; font-weight:600; letter-spacing:1.5px; text-transform:uppercase; background:var(--gold-glow); color:var(--gold); }
+  .ea-step.highlight .ea-step-time { background:rgba(52,199,123,.15); color:#86efac; }
+
+  /* Progress */
+  .ea-progress-card { background:var(--bg-2); border:1px solid var(--line-2); border-radius:var(--radius-lg); padding:24px; margin-bottom:32px; }
+  .ea-progress-head { display:flex; justify-content:space-between; align-items:baseline; margin-bottom:14px; flex-wrap:wrap; gap:10px; }
+  .ea-progress-label { font-family:Inter,sans-serif; font-size:.7rem; color:var(--ink-3); letter-spacing:.2em; text-transform:uppercase; font-weight:600; }
+  .ea-progress-stat { font-family:Inter,sans-serif; font-size:.95rem; color:var(--ink-2); font-feature-settings:"tnum"; }
+  .ea-progress-stat strong { color:var(--gold); font-weight:700; }
+  .ea-progress-bar { height:14px; background:var(--bg-3); border-radius:99px; overflow:hidden; position:relative; }
+  .ea-progress-fill { height:100%; border-radius:99px; transition:width 1s ease; background:linear-gradient(90deg, var(--gold) 0%, var(--gold-warm) 25%, #cd7f32 50%, var(--ink-3) 75%); }
+  .ea-progress-tick { position:absolute; top:0; bottom:0; width:1px; background:var(--bg); }
+  .ea-progress-marks { display:flex; justify-content:space-between; font-size:.7rem; color:var(--ink-3); margin-top:8px; font-feature-settings:"tnum"; font-family:Inter,sans-serif; }
+
+  /* Tiers grid */
+  .ea-tiers { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; margin-bottom:24px; }
+  @media(min-width:768px){ .ea-tiers { grid-template-columns:repeat(4,1fr); } }
+  .ea-tier { position:relative; padding:20px 16px; background:var(--bg-2); border:1px solid var(--line-2); border-radius:var(--radius); transition:all .3s; }
+  .ea-tier.current { border-color:var(--gold); background:var(--gold-glow); transform:scale(1.02); }
+  .ea-tier-flag { position:absolute; top:-9px; left:50%; transform:translateX(-50%); padding:3px 12px; border-radius:99px; font-family:Inter,sans-serif; font-size:.6rem; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:var(--bg); background:var(--gold); }
+  .ea-tier-emoji { font-size:28px; line-height:1; margin-bottom:6px; }
+  .ea-tier-label { font-family:Inter,sans-serif; font-size:.7rem; font-weight:700; text-transform:uppercase; letter-spacing:.12em; }
+  .ea-tier-range { font-size:.7rem; color:var(--ink-3); margin:2px 0 12px 0; font-family:Inter,sans-serif; font-feature-settings:"tnum"; }
+  .ea-tier-months { font-family:'Fraunces',serif; font-size:1.9rem; font-weight:500; line-height:1; }
+  .ea-tier-sub { font-size:.8rem; color:var(--ink-2); margin-top:4px; }
+  .ea-tier-fee { font-size:.7rem; color:var(--ink-3); margin-top:10px; padding-top:10px; border-top:1px solid var(--line-2); }
+  .ea-tier.t1 .ea-tier-label, .ea-tier.t1 .ea-tier-months { color:var(--gold); }
+  .ea-tier.t2 .ea-tier-label, .ea-tier.t2 .ea-tier-months { color:#c0c0c0; }
+  .ea-tier.t3 .ea-tier-label, .ea-tier.t3 .ea-tier-months { color:#cd7f32; }
+  .ea-tier.t4 .ea-tier-label, .ea-tier.t4 .ea-tier-months { color:var(--ink-3); }
+
+  /* Beyond 1000 note */
+  .ea-beyond { display:flex; align-items:center; gap:14px; padding:18px 22px; background:var(--bg-2); border:1px solid var(--line-2); border-radius:var(--radius-lg); margin-bottom:48px; }
+  .ea-beyond-icon { font-size:26px; flex-shrink:0; }
+  .ea-beyond-text { font-size:.9rem; line-height:1.6; color:var(--ink-2); }
+  .ea-beyond-text strong { color:var(--ink); }
+
+  /* Why cards */
+  .ea-why { background:var(--bg-2); border:1px solid var(--line-2); border-radius:var(--radius-lg); padding:40px 28px; margin-bottom:48px; }
+  .ea-why-grid { display:grid; grid-template-columns:1fr; gap:16px; margin-top:24px; }
+  @media(min-width:768px){ .ea-why-grid { grid-template-columns:repeat(3,1fr); } }
+  .ea-why-card { padding:22px; background:var(--bg); border:1px solid var(--line-2); border-radius:var(--radius); }
+  .ea-why-card-icon { font-size:30px; margin-bottom:10px; }
+  .ea-why-card h4 { font-family:Inter,sans-serif; font-size:1rem; font-weight:700; margin-bottom:8px; }
+  .ea-why-card p { font-size:.9rem; color:var(--ink-2); line-height:1.6; margin:0; }
+
+  /* Pricing */
+  .ea-pricing { background:var(--bg-2); border:1px solid var(--line-2); border-radius:var(--radius-lg); padding:40px 28px; margin-bottom:48px; }
+  .ea-pricing-grid { display:grid; grid-template-columns:1fr; gap:16px; margin-bottom:24px; }
+  @media(min-width:640px){ .ea-pricing-grid { grid-template-columns:1fr 1fr; } }
+  .ea-pricing-card { padding:28px; background:var(--bg); border:1px solid var(--line-2); border-radius:var(--radius); text-align:center; }
+  .ea-pricing-card.gold { border-color:var(--line); background:var(--gold-glow); }
+  .ea-pricing-card-label { font-family:Inter,sans-serif; font-size:.7rem; color:var(--ink-3); letter-spacing:.2em; text-transform:uppercase; font-weight:600; margin-bottom:10px; }
+  .ea-pricing-card-price { font-family:'Fraunces',serif; font-size:3rem; font-weight:500; line-height:1; }
+  .ea-pricing-card.gold .ea-pricing-card-price { color:var(--gold); }
+  .ea-pricing-card-unit { font-size:.85rem; color:var(--ink-2); margin-top:8px; }
+  .ea-pricing-card-note { font-size:.75rem; color:var(--ink-3); margin-top:14px; padding-top:12px; border-top:1px solid var(--line-2); }
+
+  .ea-compare { background:var(--bg); border:1px solid var(--line-2); border-radius:var(--radius); padding:22px; margin-top:18px; }
+  .ea-compare-title { font-family:Inter,sans-serif; font-size:.7rem; color:var(--ink-3); letter-spacing:.2em; text-transform:uppercase; text-align:center; margin-bottom:14px; font-weight:600; }
+  .ea-compare-row { display:flex; justify-content:space-between; align-items:center; padding:11px 0; border-bottom:1px solid var(--line-2); font-size:.92rem; }
+  .ea-compare-row:last-child { border-bottom:none; }
+  .ea-compare-row.us { background:var(--gold-glow); margin:0 -10px; padding:12px 10px; border-radius:var(--radius); border-bottom:none; }
+  .ea-compare-row.us .ea-compare-name { color:var(--gold); font-weight:700; }
+  .ea-compare-name { color:var(--ink); }
+  .ea-compare-price { color:var(--ink-2); font-weight:600; font-feature-settings:"tnum"; }
+  .ea-compare-row.us .ea-compare-price { color:var(--gold); }
+
+  .ea-pricing-note { text-align:center; font-size:.85rem; color:var(--ink-2); margin:18px 0 0 0; line-height:1.6; }
+  .ea-pricing-note strong { color:var(--ink); }
+  .ea-pricing-note em { font-style:italic; color:var(--ink-3); display:block; margin-top:6px; font-size:.78rem; }
+
+  /* Guarantees */
+  .ea-guarantees { background:linear-gradient(135deg, rgba(52,199,123,.06) 0%, rgba(52,199,123,.02) 100%); border:1px solid rgba(52,199,123,.25); border-radius:var(--radius-lg); padding:40px 28px; margin-bottom:48px; }
+  .ea-guarantees-list { display:grid; grid-template-columns:1fr; gap:12px; margin-top:24px; }
+  @media(min-width:640px){ .ea-guarantees-list { grid-template-columns:1fr 1fr; } }
+  .ea-guarantee { display:flex; gap:14px; padding:16px; background:var(--bg); border:1px solid rgba(52,199,123,.18); border-radius:var(--radius); }
+  .ea-guarantee-icon { font-size:22px; flex-shrink:0; line-height:1.3; }
+  .ea-guarantee h5 { font-family:Inter,sans-serif; font-size:.95rem; font-weight:700; margin:0 0 4px 0; }
+  .ea-guarantee p { font-size:.85rem; color:var(--ink-2); line-height:1.5; margin:0; }
+
+  /* FAQ */
+  .ea-faq { margin-bottom:48px; }
+  .ea-faq-list { display:grid; gap:12px; margin-top:24px; }
+  .ea-faq-item { background:var(--bg-2); border:1px solid var(--line-2); border-radius:var(--radius); overflow:hidden; }
+  .ea-faq-question { width:100%; background:none; border:none; color:var(--ink); padding:18px 22px; text-align:left; font-family:Inter,sans-serif; font-size:.95rem; font-weight:600; cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap:14px; }
+  .ea-faq-question:hover { background:var(--gold-glow); }
+  .ea-faq-arrow { color:var(--gold); transition:transform .25s; flex-shrink:0; font-size:.85rem; }
+  .ea-faq-item.open .ea-faq-arrow { transform:rotate(180deg); }
+  .ea-faq-answer { max-height:0; overflow:hidden; transition:max-height .3s; }
+  .ea-faq-item.open .ea-faq-answer { max-height:700px; }
+  .ea-faq-answer-inner { padding:4px 22px 20px 22px; font-size:.9rem; color:var(--ink-2); line-height:1.7; border-top:1px solid var(--line-2); padding-top:16px; }
+  .ea-faq-answer-inner strong { color:var(--ink); }
+  .ea-faq-answer-inner .gold { color:var(--gold); }
+
+  /* Form */
+  .ea-form-card { background:var(--bg-2); border:1px solid var(--line); border-radius:var(--radius-lg); padding:40px 28px; }
+  @media(min-width:768px){ .ea-form-card { padding:48px 40px; } }
+  .ea-form-card h2 { font-size:clamp(1.8rem, 3vw, 2.4rem); margin-bottom:8px; }
+  .ea-form-sub { color:var(--ink-2); font-size:.95rem; line-height:1.6; margin:0 0 28px 0; }
+  .ea-form-sub strong { color:var(--gold); }
+
+  .ea-row { display:grid; grid-template-columns:1fr; gap:16px; margin-bottom:16px; }
+  @media(min-width:640px){ .ea-row.row-2 { grid-template-columns:1fr 1fr; } }
+
+  .ea-form-card label { display:block; font-family:Inter,sans-serif; font-size:.78rem; font-weight:600; letter-spacing:.04em; color:var(--ink); margin-bottom:8px; }
+  .ea-form-card input[type=text], .ea-form-card input[type=email], .ea-form-card input[type=tel], .ea-form-card input[type=number], .ea-form-card select {
+    width:100%; background:var(--bg); border:1px solid var(--line-2); border-radius:var(--radius);
+    padding:13px 16px; color:var(--ink); font-size:.95rem; font-family:Inter,sans-serif; transition:border-color .2s;
+  }
+  .ea-form-card input:focus, .ea-form-card select:focus { outline:none; border-color:var(--gold); }
+  .ea-form-card input::placeholder { color:var(--ink-3); }
+  .ea-form-card select { cursor:pointer; }
+
+  .ea-help { font-family:Inter,sans-serif; font-size:.78rem; color:var(--ink-3); margin-top:7px; line-height:1.5; }
+  .ea-error { font-size:.78rem; color:#fca5a5; margin-top:6px; display:none; }
+  .ea-field.has-error input, .ea-field.has-error select { border-color:var(--red); }
+  .ea-field.has-error .ea-error { display:block; }
+  .ea-required { color:var(--gold); }
+
+  .ea-secretariat-other { display:none; margin-top:12px; }
+  .ea-secretariat-other.visible { display:block; }
+  .ea-secretariat-other.visible input { border-color:var(--line); }
+
+  /* Mandate box */
+  .ea-mandate {
+    background:linear-gradient(135deg, var(--gold-glow) 0%, rgba(212,168,87,.04) 100%);
+    border:1px solid var(--line); border-radius:var(--radius-lg);
+    padding:24px; margin:28px 0 18px 0;
+  }
+  .ea-mandate-title { display:flex; align-items:center; gap:12px; font-family:Inter,sans-serif; font-size:.95rem; font-weight:700; color:var(--gold); margin-bottom:14px; flex-wrap:wrap; }
+  .ea-mandate-badge { background:var(--gold); color:var(--bg); padding:3px 10px; border-radius:99px; font-size:.65rem; letter-spacing:.1em; text-transform:uppercase; font-weight:700; }
+  .ea-mandate-list { list-style:none; padding:0; margin:0; }
+  .ea-mandate-list li { display:flex; gap:12px; padding:9px 0; font-size:.9rem; color:var(--ink); line-height:1.6; align-items:flex-start; }
+  .ea-mandate-list li::before { content:"✉️"; flex-shrink:0; }
+  .ea-mandate-list li:nth-child(2)::before { content:"🕒"; }
+  .ea-mandate-list li:nth-child(3)::before { content:"📤"; }
+  .ea-mandate-list li:nth-child(4)::before { content:"📞"; }
+  .ea-mandate-list strong { color:var(--gold); }
+  .ea-mandate-cta { margin-top:16px; padding:14px; background:var(--bg); border-radius:var(--radius); text-align:center; font-size:.9rem; color:var(--ink-2); }
+  .ea-mandate-cta strong { color:var(--ink); display:block; margin-bottom:4px; }
+  .ea-mandate-cta a { color:var(--gold); font-weight:700; }
+
+  /* Consent */
+  .ea-consent { display:flex; gap:14px; padding:18px; background:var(--bg); border:1px solid var(--line-2); border-radius:var(--radius); margin-bottom:18px; cursor:pointer; transition:all .2s; }
+  .ea-consent.checked { border-color:rgba(52,199,123,.4); background:rgba(52,199,123,.05); }
+  .ea-consent.has-error { border-color:var(--red); background:rgba(239,77,77,.06); }
+  .ea-consent input[type=checkbox] { flex-shrink:0; width:20px; height:20px; margin-top:2px; cursor:pointer; accent-color:var(--gold); }
+  .ea-consent-text { font-size:.9rem; line-height:1.65; color:var(--ink); }
+  .ea-consent-text strong { color:var(--gold); }
+
+  .ea-submit-btn {
+    width:100%; padding:18px; border-radius:var(--radius); border:none; cursor:pointer;
+    font-family:Inter,sans-serif; font-weight:700; font-size:1rem; color:var(--bg);
+    background:linear-gradient(135deg, var(--gold) 0%, var(--gold-deep) 100%);
+    margin-top:8px; transition:transform .15s, box-shadow .2s;
+    box-shadow:var(--shadow-gold);
+  }
+  .ea-submit-btn:hover { transform:translateY(-1px); }
+  .ea-submit-btn:disabled { opacity:.5; cursor:not-allowed; transform:none; }
+
+  .ea-legal { font-size:.78rem; color:var(--ink-3); text-align:center; margin-top:14px; line-height:1.55; }
+
+  .ea-hp { position:absolute; left:-9999px; opacity:0; pointer-events:none; }
+
+  /* Trust footer */
+  .ea-trust { background:var(--bg-2); border:1px solid var(--line-2); border-radius:var(--radius-lg); padding:28px 24px; margin-top:48px; }
+  .ea-trust-title { text-align:center; font-family:Inter,sans-serif; font-size:.7rem; color:var(--ink-3); letter-spacing:.2em; text-transform:uppercase; margin-bottom:18px; font-weight:600; }
+  .ea-trust-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; }
+  @media(min-width:768px){ .ea-trust-grid { grid-template-columns:repeat(4,1fr); } }
+  .ea-trust-item { text-align:center; padding:16px 12px; background:var(--bg); border:1px solid var(--line-2); border-radius:var(--radius); }
+  .ea-trust-icon { font-size:24px; margin-bottom:8px; }
+  .ea-trust-label { font-family:Inter,sans-serif; font-size:.7rem; color:var(--ink-3); letter-spacing:.15em; text-transform:uppercase; }
+  .ea-trust-value { font-family:Inter,sans-serif; font-size:.92rem; color:var(--ink); font-weight:700; margin-top:5px; font-feature-settings:"tnum"; }
+
+  /* Success page */
+  .ea-success { display:none; min-height:100vh; padding:60px 24px; }
+  .ea-success.visible { display:block; }
+  .ea-success-card { max-width:660px; margin:0 auto; }
+  .ea-success-box { background:linear-gradient(135deg, var(--gold-glow) 0%, rgba(212,168,87,.04) 100%); border:1px solid var(--line); border-radius:var(--radius-lg); padding:40px 28px; text-align:center; }
+  .ea-success-emoji { font-size:64px; line-height:1; margin-bottom:10px; }
+  .ea-success-tier { font-family:Inter,sans-serif; font-size:.72rem; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:var(--gold); margin-bottom:14px; }
+  .ea-success-h1 { font-family:'Fraunces',serif; font-size:2.2rem; margin:0 0 8px 0; font-weight:500; line-height:1.15; }
+  .ea-success-sub { color:var(--ink-2); font-size:.95rem; margin:0 0 28px 0; }
+  .ea-num-box { background:var(--bg); border:1px solid var(--line-2); border-radius:var(--radius); padding:24px; margin-bottom:22px; }
+  .ea-num-label { font-family:Inter,sans-serif; font-size:.7rem; color:var(--ink-3); letter-spacing:.2em; text-transform:uppercase; margin-bottom:8px; font-weight:600; }
+  .ea-num-value { font-family:'Fraunces',serif; font-size:3rem; font-weight:500; color:var(--gold); letter-spacing:.05em; line-height:1; }
+  .ea-num-sub { font-size:.78rem; color:var(--ink-3); margin-top:8px; }
+
+  .ea-success-alert { background:linear-gradient(135deg, rgba(52,199,123,.10) 0%, rgba(52,199,123,.03) 100%); border:1px solid rgba(52,199,123,.35); border-radius:var(--radius); padding:20px; margin-bottom:22px; text-align:left; }
+  .ea-success-alert-title { display:flex; align-items:center; gap:10px; font-family:Inter,sans-serif; font-size:.95rem; font-weight:700; color:#86efac; margin-bottom:10px; flex-wrap:wrap; }
+  .ea-countdown { display:inline-block; padding:4px 12px; border-radius:99px; background:rgba(52,199,123,.15); color:#86efac; font-feature-settings:"tnum"; font-weight:700; font-size:.85rem; font-family:Inter,sans-serif; }
+  .ea-success-alert-text { font-size:.9rem; color:var(--ink); line-height:1.65; }
+  .ea-success-alert-text strong { color:#86efac; }
+  .ea-success-alert-text a { color:var(--gold); font-weight:700; }
+
+  .ea-next-steps { background:var(--bg); border:1px solid var(--line-2); border-radius:var(--radius); padding:22px; text-align:left; margin-bottom:22px; }
+  .ea-next-step { display:flex; gap:14px; padding:13px 0; border-bottom:1px solid var(--line-2); }
+  .ea-next-step:last-child { border-bottom:none; }
+  .ea-next-step-num { width:28px; height:28px; border-radius:50%; background:var(--gold-glow); color:var(--gold); display:flex; align-items:center; justify-content:center; font-weight:700; font-size:.85rem; flex-shrink:0; font-family:Inter,sans-serif; }
+  .ea-next-step-content { flex:1; font-size:.88rem; line-height:1.55; }
+  .ea-next-step-content strong { color:var(--ink); display:block; margin-bottom:3px; font-size:.92rem; font-family:Inter,sans-serif; }
+  .ea-next-step-content span { color:var(--ink-2); }
+
+  .ea-cta-btn { display:inline-block; padding:14px 32px; border-radius:var(--radius); font-family:Inter,sans-serif; font-weight:700; font-size:.92rem; color:var(--bg); text-decoration:none; background:linear-gradient(135deg, var(--gold) 0%, var(--gold-deep) 100%); }
+
+  /* Footer adapt */
+  footer.ea-footer { padding:48px 24px 32px; text-align:center; border-top:1px solid var(--line-2); margin-top:60px; }
+  .ea-footer p { font-size:.85rem; color:var(--ink-3); line-height:1.7; margin:4px 0; }
+  .ea-footer p strong { color:var(--ink-2); }
+  .ea-footer a { color:var(--gold); }
+</style>
+</head>
+<body>
+
+<!-- ═══ NAV ═══ -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="logo">
+      <span class="logo-mark">A</span>
+      <span>Aureus Social Pro <small>BE</small></span>
+    </a>
+    <div class="nav-links">
+      <a href="/#fonctionnalites">Fonctionnalités</a>
+      <a href="/#optimisation">Module Optimisation</a>
+      <a href="/#fiduciaires">Pour fiduciaires</a>
+      <a href="/#tarifs">Tarifs</a>
+      <a href="/early-access.html" class="nav-cta">Early Access</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══ FORM PAGE ═══ -->
+<div id="formPage">
+
+  <!-- Hero -->
+  <section class="ea-hero">
+    <div class="ea-hero-inner">
+      <span class="ea-eyebrow">✨ Programme issu de 250 audits · Primes exclusives</span>
+      <h1 class="ea-h1">Rejoignez la nouvelle génération<br>de la <em>paie belge</em>.</h1>
+      <p class="ea-sub">
+        Aureus Social Pro · Conçu à partir de l'audit de <strong>250 entreprises belges</strong>. Les <strong>1.000 premières inscriptions</strong> bénéficient de primes exclusives — frais d'inscription offerts et jusqu'à 4 mois gratuits.
+      </p>
+      <div class="ea-counter">
+        <span class="ea-counter-dot"></span>
+        <span class="ea-counter-text"><strong id="totalRemaining">953</strong> primes restantes / 1.000</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Deadline + Reflection -->
+  <div class="ea-section" style="padding-top:0;">
+    <div class="ea-deadline">
+      <div class="ea-deadline-icon">⏰</div>
+      <div class="ea-deadline-text">
+        <strong>Deadline impérative :</strong> le changement de secrétariat social doit être effectif <span class="ea-deadline-date">avant le 30 juin 2026</span> pour bénéficier des conditions exclusives.
+      </div>
+    </div>
+
+    <div class="ea-reflection">
+      <div class="ea-reflection-icon">🛡️</div>
+      <div class="ea-reflection-text">
+        <strong>Période de réflexion de 24h garantie.</strong> Aucun engagement irréversible à l'inscription. Vous recevrez un email récapitulatif et pourrez nous contacter ou annuler à tout moment durant les 24 premières heures, <strong>avant l'envoi du courrier recommandé vers votre secrétariat social actuel</strong>.
+      </div>
+    </div>
+  </div>
+
+  <!-- Process -->
+  <div class="ea-section" style="padding-top:0;">
+    <div class="ea-process">
+      <div class="ea-section-title" style="margin-bottom:0;">
+        <span class="eyebrow">Processus en 4 étapes</span>
+        <h3 style="font-size:clamp(1.4rem, 2.5vw, 1.9rem); margin:14px 0 0 0;">De l'inscription au transfert effectif</h3>
+      </div>
+      <div class="ea-steps">
+        <div class="ea-step">
+          <div class="ea-step-num">1</div>
+          <h4>Vous vous inscrivez</h4>
+          <p>Votre place est verrouillée et vous recevez un email récapitulatif détaillé.</p>
+          <span class="ea-step-time">⚡ Maintenant</span>
+        </div>
+        <div class="ea-step highlight">
+          <div class="ea-step-num">2</div>
+          <h4>Période de réflexion</h4>
+          <p>24h pour annuler, poser vos questions par téléphone ou email. Aucun engagement.</p>
+          <span class="ea-step-time">🛡️ 24h</span>
+        </div>
+        <div class="ea-step">
+          <div class="ea-step-num">3</div>
+          <h4>Recommandé envoyé</h4>
+          <p>Sauf objection de votre part, le recommandé part vers votre ancien secrétariat.</p>
+          <span class="ea-step-time">📤 Après 24h</span>
+        </div>
+        <div class="ea-step">
+          <div class="ea-step-num">4</div>
+          <h4>RDV d'onboarding</h4>
+          <p>Notre équipe vous appelle pour finaliser l'activation de votre compte.</p>
+          <span class="ea-step-time">📞 Sous 48–72h</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Progress bar -->
+    <div class="ea-progress-card">
+      <div class="ea-progress-head">
+        <div class="ea-progress-label">Progression du programme</div>
+        <div class="ea-progress-stat"><strong id="totalCount">47</strong> / 1.000 inscrits</div>
+      </div>
+      <div class="ea-progress-bar">
+        <div class="ea-progress-fill" id="progressFill" style="width:4.7%"></div>
+        <div class="ea-progress-tick" style="left:25%"></div>
+        <div class="ea-progress-tick" style="left:50%"></div>
+        <div class="ea-progress-tick" style="left:75%"></div>
+      </div>
+      <div class="ea-progress-marks">
+        <span>0</span><span>250</span><span>500</span><span>750</span><span>1000</span>
+      </div>
+    </div>
+
+    <!-- Tiers -->
+    <div class="ea-tiers">
+      <div class="ea-tier current t1">
+        <div class="ea-tier-flag">En cours</div>
+        <div class="ea-tier-emoji">🥇</div>
+        <div class="ea-tier-label">Privilège Fondateur</div>
+        <div class="ea-tier-range">Inscrits 1–250</div>
+        <div class="ea-tier-months">4 mois</div>
+        <div class="ea-tier-sub">gratuits</div>
+        <div class="ea-tier-fee">+ Frais offerts</div>
+      </div>
+      <div class="ea-tier t2">
+        <div class="ea-tier-emoji">🥈</div>
+        <div class="ea-tier-label">Privilège Pionnier</div>
+        <div class="ea-tier-range">Inscrits 251–500</div>
+        <div class="ea-tier-months">3 mois</div>
+        <div class="ea-tier-sub">gratuits</div>
+        <div class="ea-tier-fee">+ Frais offerts</div>
+      </div>
+      <div class="ea-tier t3">
+        <div class="ea-tier-emoji">🥉</div>
+        <div class="ea-tier-label">Privilège Avancé</div>
+        <div class="ea-tier-range">Inscrits 501–750</div>
+        <div class="ea-tier-months">2 mois</div>
+        <div class="ea-tier-sub">gratuits</div>
+        <div class="ea-tier-fee">+ Frais offerts</div>
+      </div>
+      <div class="ea-tier t4">
+        <div class="ea-tier-emoji">🎟️</div>
+        <div class="ea-tier-label">Privilège Standard</div>
+        <div class="ea-tier-range">Inscrits 751–1000</div>
+        <div class="ea-tier-months">1 mois</div>
+        <div class="ea-tier-sub">gratuit</div>
+        <div class="ea-tier-fee">+ Frais offerts</div>
+      </div>
+    </div>
+
+    <div class="ea-beyond">
+      <div class="ea-beyond-icon">🎁</div>
+      <div class="ea-beyond-text">
+        <strong>Inscriptions au-delà de la 1000<sup>e</sup> place</strong> · Vous bénéficiez toujours de <strong style="color:var(--gold);">1 mois offert</strong> à l'activation. Aureus Social Pro reste accessible à tous, mais les avantages exclusifs (jusqu'à 4 mois gratuits + frais offerts) sont réservés aux 1.000 premières inscriptions.
+      </div>
+    </div>
+  </div>
+
+  <!-- Why -->
+  <div class="ea-section" style="padding-top:0;">
+    <div class="ea-why">
+      <div class="ea-section-title" style="margin-bottom:0;">
+        <span class="eyebrow">Pourquoi cette offre exceptionnelle</span>
+        <h2>On vous dit <em>la vérité</em></h2>
+        <p>
+          Aureus Social Pro est une nouvelle plateforme de paie belge. Pour notre lancement officiel, nous sélectionnons <strong style="color:var(--gold);">1.000 employeurs pionniers</strong> bénéficiant de conditions exclusives. En échange de votre confiance dès le départ, nous offrons des avantages exceptionnels. <strong style="color:var(--ink);">Aucun vice caché — voici la logique.</strong>
+        </p>
+      </div>
+      <div class="ea-why-grid">
+        <div class="ea-why-card">
+          <div class="ea-why-card-icon">🚀</div>
+          <h4>Phase de lancement</h4>
+          <p>Vous faites partie des premières entreprises à accéder à une nouvelle génération de gestion payroll belge, avec un accès privilégié et des conditions exclusives dès aujourd'hui.</p>
+        </div>
+        <div class="ea-why-card">
+          <div class="ea-why-card-icon">🤝</div>
+          <h4>Partenariat gagnant-gagnant</h4>
+          <p>Vous bénéficiez d'un tarif imbattable et d'un accompagnement VIP, tout en participant à l'évolution d'une nouvelle génération de payroll belge.</p>
+        </div>
+        <div class="ea-why-card">
+          <div class="ea-why-card-icon">📈</div>
+          <h4>Tarif verrouillé à vie</h4>
+          <p>En tant qu'employeur pionnier, vous conservez vos conditions tarifaires exclusives à vie.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pricing -->
+    <div class="ea-pricing">
+      <div class="ea-section-title" style="margin-bottom:24px;">
+        <span class="eyebrow">Tarification 100% transparente</span>
+        <h2>Voici exactement <em>ce que vous paierez</em></h2>
+      </div>
+      <div class="ea-pricing-grid">
+        <div class="ea-pricing-card gold">
+          <div class="ea-pricing-card-label">Pendant les mois gratuits</div>
+          <div class="ea-pricing-card-price">0 €</div>
+          <div class="ea-pricing-card-unit">Jusqu'à 4 mois offerts selon votre formule</div>
+          <div class="ea-pricing-card-note">+ frais d'inscription offerts (~250€)</div>
+        </div>
+        <div class="ea-pricing-card">
+          <div class="ea-pricing-card-label">Après les mois gratuits</div>
+          <div class="ea-pricing-card-price">29 €</div>
+          <div class="ea-pricing-card-unit">par fiche de paie / employé / mois</div>
+          <div class="ea-pricing-card-note">Tarif Privilège verrouillé à vie</div>
+        </div>
+      </div>
+
+      <div class="ea-compare">
+        <div class="ea-compare-title">Comparatif marché belge (tarif moyen par fiche de paie)</div>
+        <div class="ea-compare-row"><div class="ea-compare-name">🏢 Concurrent traditionnel A</div><div class="ea-compare-price">~ 35–45 €</div></div>
+        <div class="ea-compare-row"><div class="ea-compare-name">🏢 Concurrent traditionnel B</div><div class="ea-compare-price">~ 32–40 €</div></div>
+        <div class="ea-compare-row"><div class="ea-compare-name">🏢 Concurrent traditionnel C</div><div class="ea-compare-price">~ 30–38 €</div></div>
+        <div class="ea-compare-row"><div class="ea-compare-name">🏢 Concurrent traditionnel D</div><div class="ea-compare-price">~ 33–42 €</div></div>
+        <div class="ea-compare-row us"><div class="ea-compare-name">⭐ Aureus Social Pro (Privilège)</div><div class="ea-compare-price">29 €</div></div>
+      </div>
+
+      <p class="ea-pricing-note">
+        💡 <strong>Engagement minimum de 24 mois</strong> après la période offerte, afin de garantir vos conditions tarifaires exclusives et l'accompagnement privilégié réservé aux employeurs pionniers.
+        <em>Résiliable ensuite avec un préavis de 30 jours. Aucun frais caché. Aucun ajustement tarifaire pendant la durée du contrat.</em>
+      </p>
+    </div>
+
+    <!-- Guarantees -->
+    <div class="ea-guarantees">
+      <div class="ea-section-title" style="margin-bottom:0;">
+        <span class="eyebrow" style="color:#86efac;">🛡️ Vos 6 garanties écrites</span>
+        <h2>Aucun vice caché — <em style="color:#86efac;">noir sur blanc</em></h2>
+        <p>
+          Chaque garantie ci-dessous est inscrite dans nos Conditions Générales d'Utilisation et vous est opposable juridiquement. Pas de petites lettres, pas de surprise.
+        </p>
+      </div>
+      <div class="ea-guarantees-list">
+        <div class="ea-guarantee">
+          <div class="ea-guarantee-icon">💳</div>
+          <div>
+            <h5>Aucune carte bancaire à l'inscription</h5>
+            <p>Nous ne demandons aucun moyen de paiement avant le 1er mois facturé.</p>
+          </div>
+        </div>
+        <div class="ea-guarantee">
+          <div class="ea-guarantee-icon">🔓</div>
+          <div>
+            <h5>Vos données vous appartiennent</h5>
+            <p>Export complet Excel + PDF de toutes vos données paie en 1 clic, à tout moment, gratuitement.</p>
+          </div>
+        </div>
+        <div class="ea-guarantee">
+          <div class="ea-guarantee-icon">🇪🇺</div>
+          <div>
+            <h5>Données hébergées en Europe</h5>
+            <p>Serveurs Supabase à Francfort. 100% conforme RGPD. Aucun transfert hors UE.</p>
+          </div>
+        </div>
+        <div class="ea-guarantee">
+          <div class="ea-guarantee-icon">💰</div>
+          <div>
+            <h5>Aucun frais caché</h5>
+            <p>29€/fiche/mois, point. Pas de frais de mise en service, pas de frais d'export, pas de frais de support.</p>
+          </div>
+        </div>
+        <div class="ea-guarantee">
+          <div class="ea-guarantee-icon">🔒</div>
+          <div>
+            <h5>Tarif verrouillé à vie</h5>
+            <p>Le tarif exclusif ne changera jamais, même si nos tarifs devraient augmenter.</p>
+          </div>
+        </div>
+        <div class="ea-guarantee">
+          <div class="ea-guarantee-icon">🛡️</div>
+          <div>
+            <h5>24h de réflexion sans engagement</h5>
+            <p>Vous pouvez annuler votre inscription dans les 24h sans aucun frais ni explication.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="ea-faq">
+      <div class="ea-section-title">
+        <span class="eyebrow">Les questions que vous vous posez</span>
+        <h2>FAQ — <em>on répond à tout</em></h2>
+        <p>Cliquez sur une question pour voir la réponse</p>
+      </div>
+
+      <div class="ea-faq-list">
+        <div class="ea-faq-item">
+          <button type="button" class="ea-faq-question" onclick="toggleFaq(this)">
+            <span>🤔 Où est le piège ? C'est trop beau pour être vrai...</span>
+            <span class="ea-faq-arrow">▼</span>
+          </button>
+          <div class="ea-faq-answer"><div class="ea-faq-answer-inner">
+            <strong>Il n'y a pas de piège.</strong> La vérité est simple : nous lançons une nouvelle plateforme et nous avons besoin des 1.000 premiers clients pour démarrer.
+            Ces clients pionniers obtiennent des conditions exceptionnelles (mois gratuits, frais offerts, tarif verrouillé à vie) <strong>en échange de leur confiance</strong> au moment où la plateforme est encore jeune.
+            Nous misons sur la qualité du produit pour que vous restiez après les mois gratuits — et que vous nous recommandiez à d'autres employeurs.
+            C'est un pari gagnant-gagnant : <strong>vous économisez beaucoup, nous obtenons des clients fidèles et des témoignages.</strong>
+          </div></div>
+        </div>
+
+        <div class="ea-faq-item">
+          <button type="button" class="ea-faq-question" onclick="toggleFaq(this)">
+            <span>💸 Que se passe-t-il après les mois gratuits ?</span>
+            <span class="ea-faq-arrow">▼</span>
+          </button>
+          <div class="ea-faq-answer"><div class="ea-faq-answer-inner">
+            Après vos mois gratuits, vous passez automatiquement au tarif Privilège de <span class="gold">29€ par fiche de paie / employé / mois</span> — verrouillé à vie.
+            Nous vous prévenons par email <strong>15 jours avant la fin de la période gratuite</strong>. Aucune surprise.
+            Si vous ne souhaitez pas continuer, vous pouvez résilier sans frais avant la fin des mois gratuits — vous gardez l'export complet de vos données.
+          </div></div>
+        </div>
+
+        <div class="ea-faq-item">
+          <button type="button" class="ea-faq-question" onclick="toggleFaq(this)">
+            <span>📅 Et l'engagement de 24 mois, c'est bloquant ?</span>
+            <span class="ea-faq-arrow">▼</span>
+          </button>
+          <div class="ea-faq-answer"><div class="ea-faq-answer-inner">
+            L'engagement de 24 mois s'applique <strong>uniquement après les mois gratuits</strong>, c'est-à-dire à partir du moment où vous commencez à payer.
+            Cet engagement nous permet de garantir le tarif Privilège exceptionnel.
+            Pendant les mois gratuits, vous pouvez résilier à tout moment sans frais.
+            Après les 24 mois, vous restez avec un préavis de <strong>30 jours</strong>, sans pénalité.
+          </div></div>
+        </div>
+
+        <div class="ea-faq-item">
+          <button type="button" class="ea-faq-question" onclick="toggleFaq(this)">
+            <span>🚪 Si je veux partir, je récupère mes données ?</span>
+            <span class="ea-faq-arrow">▼</span>
+          </button>
+          <div class="ea-faq-answer"><div class="ea-faq-answer-inner">
+            <strong>Oui, à 100% et gratuitement.</strong> Depuis votre tableau de bord, un bouton "Exporter toutes mes données" génère en 1 clic :
+            <br><br>
+            • L'historique complet des fiches de paie (PDF)<br>
+            • Tous les contrats de travail (PDF)<br>
+            • La liste des employés avec toutes leurs données (Excel)<br>
+            • L'historique des Dimona, DmfA et déclarations (Excel + XML)<br>
+            • L'export comptable au format de votre choix (WinBooks, BOB 50, Exact, Octopus)
+            <br><br>
+            Vos données vous appartiennent. <strong>Pas de frais d'export, pas de délai, pas de captivité.</strong>
+          </div></div>
+        </div>
+
+        <div class="ea-faq-item">
+          <button type="button" class="ea-faq-question" onclick="toggleFaq(this)">
+            <span>🏛️ Êtes-vous vraiment agréés par l'ONSS ?</span>
+            <span class="ea-faq-arrow">▼</span>
+          </button>
+          <div class="ea-faq-answer"><div class="ea-faq-answer-inner">
+            <strong>Oui.</strong> Aureus IA SPRL est un prestataire de services sociaux <strong class="gold">ONSS niveau 2</strong>, habilité à effectuer les déclarations Dimona, DmfA et Belcotax pour le compte de ses clients.
+            <br><br>
+            • Matricule ONSS définitif : <strong class="gold">66999-83</strong> (attribué le 30/03/2026)<br>
+            • Numéro d'entreprise : <strong>BCE BE 1028.230.781</strong><br>
+            • Siège social : Sq. Eugène Plasky 92-94 bte 11, 1030 Schaerbeek<br>
+            • Gérant légal : Salem Abdellah
+            <br><br>
+            Vous pouvez vérifier ces informations sur la <strong>Banque-Carrefour des Entreprises</strong> ainsi que sur le portail ONSS.
+          </div></div>
+        </div>
+
+        <div class="ea-faq-item">
+          <button type="button" class="ea-faq-question" onclick="toggleFaq(this)">
+            <span>📤 Pourquoi envoyez-vous le recommandé en mon nom ?</span>
+            <span class="ea-faq-arrow">▼</span>
+          </button>
+          <div class="ea-faq-answer"><div class="ea-faq-answer-inner">
+            Le changement de secrétariat social en Belgique <strong>doit être notifié par recommandé</strong> à l'ancien secrétariat avec un délai de préavis minimum.
+            Pour bénéficier des conditions Privilège, le transfert doit être <strong>effectif avant le 30 juin 2026</strong> — ce qui implique d'envoyer le recommandé sans tarder.
+            <br><br>
+            Nous l'envoyons en votre nom (avec votre mandat explicite) pour vous éviter cette formalité. Vous recevez une copie complète par email.
+            <br><br>
+            <strong>Vous gardez 24h pour annuler</strong> avant tout envoi. Vous pouvez aussi nous appeler au <a href="tel:+32494064901" class="gold">+32 494 06 49 01</a> pour poser vos questions avant.
+          </div></div>
+        </div>
+
+        <div class="ea-faq-item">
+          <button type="button" class="ea-faq-question" onclick="toggleFaq(this)">
+            <span>💼 Pourquoi êtes-vous moins cher que les secrétariats traditionnels ?</span>
+            <span class="ea-faq-arrow">▼</span>
+          </button>
+          <div class="ea-faq-answer"><div class="ea-faq-answer-inner">
+            Trois raisons :
+            <br><br>
+            <strong>1. Plateforme 100% digitale.</strong> Pas de gestionnaires de comptes physiques, pas d'agences en région. Notre app fait 90% du travail automatiquement, ce qui réduit vos coûts.
+            <br><br>
+            <strong>2. Stack technique moderne.</strong> Nous avons construit la plateforme from scratch avec les dernières technologies (Next.js, Supabase). Pas de système legacy coûteux à maintenir.
+            <br><br>
+            <strong>3. Pas de marketing massif.</strong> Nos concurrents dépensent des millions en publicité. Nous misons sur la satisfaction client et le bouche-à-oreille — d'où ce programme Privilège.
+            <br><br>
+            <strong>Le service est identique</strong> : Dimona, DmfA, fiches de paie, Belcotax, gestion des CP, support juridique. Vous payez uniquement pour ce dont vous avez besoin.
+          </div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Trust -->
+    <div class="ea-trust">
+      <div class="ea-trust-title">🏛️ Une société belge, immatriculée et agréée</div>
+      <div class="ea-trust-grid">
+        <div class="ea-trust-item">
+          <div class="ea-trust-icon">🏢</div>
+          <div class="ea-trust-label">BCE</div>
+          <div class="ea-trust-value">BE 1028.230.781</div>
+        </div>
+        <div class="ea-trust-item">
+          <div class="ea-trust-icon">📋</div>
+          <div class="ea-trust-label">ONSS Niveau 2</div>
+          <div class="ea-trust-value">66999-83</div>
+        </div>
+        <div class="ea-trust-item">
+          <div class="ea-trust-icon">🔒</div>
+          <div class="ea-trust-label">Conformité</div>
+          <div class="ea-trust-value">RGPD · ISO27001</div>
+        </div>
+        <div class="ea-trust-item">
+          <div class="ea-trust-icon">🇧🇪</div>
+          <div class="ea-trust-label">Siège social</div>
+          <div class="ea-trust-value">Bruxelles</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Form -->
+    <div class="ea-form-card" style="margin-top:48px;" id="formCard">
+      <h2>Réservez votre place maintenant</h2>
+      <p class="ea-form-sub">Vous obtenez le <strong>Privilège Fondateur</strong> (4 mois gratuits + frais offerts) — il reste <strong>203</strong> formules disponibles.</p>
+
+      <form id="signupForm" autocomplete="on" novalidate>
+
+        <div class="ea-row row-2">
+          <div class="ea-field" id="f-fullName">
+            <label>Nom & Prénom <span class="ea-required">*</span></label>
+            <input type="text" name="fullName" placeholder="Jean Dupont" autocomplete="name">
+            <div class="ea-error">⚠ Nom & Prénom requis</div>
+          </div>
+          <div class="ea-field" id="f-email">
+            <label>Email professionnel <span class="ea-required">*</span></label>
+            <input type="email" name="email" placeholder="jean@societe.be" autocomplete="email">
+            <div class="ea-error">⚠ Email invalide</div>
+          </div>
+        </div>
+
+        <div class="ea-row row-2">
+          <div class="ea-field">
+            <label>Votre fonction <span style="color:var(--ink-3); font-weight:400;">(facultatif)</span></label>
+            <select name="role">
+              <option value="">Sélectionner...</option>
+              <option>Gérant / Administrateur de société</option>
+              <option>Directeur Général / CEO</option>
+              <option>Directeur RH / DRH</option>
+              <option>Directeur Financier / DAF</option>
+              <option>Responsable Paie / Office Manager</option>
+              <option>Comptable interne</option>
+              <option>Assistant(e) de direction</option>
+              <option>Expert-comptable / Fiduciaire</option>
+              <option>Indépendant / Profession libérale</option>
+              <option>Autre</option>
+            </select>
+            <div class="ea-help">💡 Pour adapter notre approche à votre rôle.</div>
+          </div>
+          <div class="ea-field">
+            <label>Téléphone</label>
+            <input type="tel" name="phone" placeholder="+32 XXX XX XX XX" autocomplete="tel">
+          </div>
+        </div>
+
+        <div class="ea-row">
+          <div class="ea-field" id="f-companyName">
+            <label>Nom de la société <span class="ea-required">*</span></label>
+            <input type="text" name="companyName" placeholder="Société SRL" autocomplete="organization">
+            <div class="ea-error">⚠ Nom de société requis</div>
+          </div>
+        </div>
+
+        <div class="ea-row row-2">
+          <div class="ea-field">
+            <label>Taille de la société</label>
+            <select name="companySize">
+              <option value="">Sélectionner...</option>
+              <option>1-5 employés</option>
+              <option>6-20 employés</option>
+              <option>21-50 employés</option>
+              <option>51-100 employés</option>
+              <option>100+ employés</option>
+            </select>
+          </div>
+          <div class="ea-field">
+            <label>Nombre exact d'employés</label>
+            <input type="number" name="employeesCount" min="0" placeholder="Ex: 12">
+          </div>
+        </div>
+
+        <div class="ea-row">
+          <div class="ea-field">
+            <label>Commission paritaire / Secteur</label>
+            <select name="sectorCp">
+              <option value="">Sélectionner votre CP...</option>
+              <option>CP 200 — Employés (général)</option>
+              <option>CP 124 — Construction</option>
+              <option>CP 140 — Transport</option>
+              <option>CP 201 — Commerce de détail indépendant</option>
+              <option>CP 202 — Alimentation</option>
+              <option>CP 209 — Métallurgie (employés)</option>
+              <option>CP 218 — CPNAE</option>
+              <option>CP 302 — Horeca</option>
+              <option>CP 311 — Grande distribution</option>
+              <option>CP 314 — Coiffure & soins</option>
+              <option>CP 322 — Intérim</option>
+              <option>CP 323 — Immobilier</option>
+              <option>CP 330 — Services aux personnes</option>
+              <option>CP 336 — Professions libérales / Fiduciaires</option>
+              <option>CP 337 — Secteur non-marchand</option>
+              <option>Autre / Je ne sais pas</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="ea-row">
+          <div class="ea-field" id="f-currentSecretariat">
+            <label>Secrétariat social actuel <span class="ea-required">*</span></label>
+            <select name="currentSecretariat" id="secretariatSelect">
+              <option value="">Sélectionner...</option>
+              <option>SD Worx</option>
+              <option>Securex</option>
+              <option>Partena Professional</option>
+              <option>Acerta</option>
+              <option>Group S</option>
+              <option>UCM</option>
+              <option>Liantis</option>
+              <option>Easypay Group</option>
+              <option>Sodalis</option>
+              <option>Attentia</option>
+              <option>HDP-Partena</option>
+              <option value="autre">Autre — préciser ci-dessous ↓</option>
+            </select>
+            <div class="ea-error">⚠ Secrétariat social requis</div>
+            <div class="ea-help">💡 Indispensable pour préparer le courrier recommandé de transfert. Cette information est <strong style="color:var(--ink);">obligatoire</strong> dans tous les cas.</div>
+            <div class="ea-secretariat-other" id="secretariatOtherWrap">
+              <label style="margin-top:12px;">Nom exact de votre secrétariat social <span class="ea-required">*</span></label>
+              <input type="text" name="secretariatOther" id="secretariatOtherInput" placeholder="Ex: Mon Secrétariat ASBL...">
+            </div>
+          </div>
+        </div>
+
+        <!-- Mandate -->
+        <div class="ea-mandate">
+          <div class="ea-mandate-title">
+            <span class="ea-mandate-badge">Important</span>
+            <span>Ce qui se passe après votre inscription</span>
+          </div>
+          <ul class="ea-mandate-list">
+            <li>Vous recevez <strong>immédiatement</strong> un email récapitulatif avec votre numéro d'inscription, le détail de l'offre et les coordonnées pour nous joindre.</li>
+            <li><strong>Période de réflexion de 24h :</strong> aucun courrier n'est envoyé pendant ce délai. Vous pouvez nous poser toutes vos questions.</li>
+            <li>Passé ce délai, <strong>sauf objection de votre part</strong>, Aureus Social Pro envoie un courrier recommandé à votre secrétariat social actuel pour amorcer le transfert avant le 30 juin 2026.</li>
+            <li>Notre équipe vous appelle ensuite <strong>sous 48 à 72h ouvrables</strong> pour planifier votre rendez-vous d'onboarding.</li>
+          </ul>
+          <div class="ea-mandate-cta">
+            <strong>📞 Une question avant de vous inscrire ?</strong>
+            Appelez-nous au <a href="tel:+32494064901">+32 494 06 49 01</a> ou écrivez à <a href="mailto:info@aureus-ia.com">info@aureus-ia.com</a>
+          </div>
+        </div>
+
+        <!-- Consent -->
+        <label class="ea-consent" id="consentRow">
+          <input type="checkbox" name="consentMandate" id="consentCheckbox">
+          <span class="ea-consent-text">
+            Je comprends et j'accepte les conditions reprises ci-dessus : place réservée immédiatement, <strong>période de réflexion de 24h sans engagement</strong>, puis envoi automatique du courrier recommandé à mon secrétariat social actuel <strong>sauf si je l'annule</strong> dans le délai. Cette démarche est nécessaire pour respecter la deadline du 30 juin 2026 et bénéficier des conditions Privilège. <span class="ea-required">*</span>
+          </span>
+        </label>
+
+        <input type="text" name="website" class="ea-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+        <button type="submit" class="ea-submit-btn" id="submitBtn">
+          🔒 Réserver ma place — 4 mois gratuits + frais offerts
+        </button>
+
+        <p class="ea-legal">En soumettant, vous acceptez nos conditions générales d'utilisation, la politique RGPD et le mandat conditionnel ci-dessus. Aucune carte bancaire requise. Vous pouvez annuler sans frais durant les 24h suivant l'inscription.</p>
+      </form>
+    </div>
+  </div>
+
+  <footer class="ea-footer">
+    <p><strong>Aureus IA SPRL</strong> — BCE BE 1028.230.781 · Matricule ONSS 66999-83</p>
+    <p>Sq. Eugène Plasky 92-94 bte 11, 1030 Schaerbeek · <a href="mailto:info@aureus-ia.com">info@aureus-ia.com</a></p>
+    <p style="margin-top:14px;"><a href="/">← Retour à la page d'accueil</a></p>
+  </footer>
+
+</div>
+
+<!-- ═══ SUCCESS PAGE ═══ -->
+<div class="ea-success" id="successPage">
+  <div class="ea-success-card">
+    <div style="text-align:center; margin-bottom:24px;">
+      <div style="font-family:Inter,sans-serif; font-size:.9rem; font-weight:700; letter-spacing:.18em; color:var(--gold);">AUREUS SOCIAL PRO</div>
+      <div style="font-size:.7rem; color:var(--ink-3); letter-spacing:.18em; text-transform:uppercase; margin-top:4px;">Logiciel de paie · Prestataire ONSS</div>
+    </div>
+
+    <div class="ea-success-box">
+      <div class="ea-success-emoji">🥇</div>
+      <div class="ea-success-tier">Privilège Fondateur</div>
+      <h1 class="ea-success-h1">Bienvenue, <span id="successFirstName">Jean</span> !</h1>
+      <p class="ea-success-sub">Votre place est confirmée.</p>
+
+      <div class="ea-num-box">
+        <div class="ea-num-label">Votre numéro d'inscription</div>
+        <div class="ea-num-value" id="successNumber">#0048</div>
+        <div class="ea-num-sub">sur 1.000 places disponibles</div>
+      </div>
+
+      <div class="ea-success-alert">
+        <div class="ea-success-alert-title">
+          <span style="font-size:22px;">🛡️</span>
+          <span>Période de réflexion en cours · <span class="ea-countdown" id="countdown">23:59:42</span></span>
+        </div>
+        <div class="ea-success-alert-text">
+          Aucun courrier recommandé n'a été envoyé. Vous disposez de <strong>24 heures complètes</strong> pour réfléchir, poser vos questions ou annuler votre inscription sans aucun frais.<br><br>
+          📞 <strong>Appelez-nous :</strong> <a href="tel:+32494064901">+32 494 06 49 01</a><br>
+          ✉️ <strong>Email :</strong> <a href="mailto:info@aureus-ia.com">info@aureus-ia.com</a>
+        </div>
+      </div>
+
+      <div class="ea-next-steps">
+        <div style="text-align:center; font-family:Inter,sans-serif; font-size:.7rem; color:var(--ink-3); letter-spacing:.2em; text-transform:uppercase; margin-bottom:14px; font-weight:600;">Vos prochaines étapes</div>
+        <div class="ea-next-step">
+          <div class="ea-next-step-num">1</div>
+          <div class="ea-next-step-content">
+            <strong>📩 Email récapitulatif envoyé</strong>
+            <span>Détail de votre inscription, numéro, tier, avantages et coordonnées pour nous joindre.</span>
+          </div>
+        </div>
+        <div class="ea-next-step">
+          <div class="ea-next-step-num">2</div>
+          <div class="ea-next-step-content">
+            <strong>🛡️ 24h de réflexion sans engagement</strong>
+            <span>Aucune action entreprise pendant cette période. Annulez ou questionnez quand vous voulez.</span>
+          </div>
+        </div>
+        <div class="ea-next-step">
+          <div class="ea-next-step-num">3</div>
+          <div class="ea-next-step-content">
+            <strong>📤 Recommandé vers <span style="color:var(--gold);" id="successSecretariat">votre secrétariat</span></strong>
+            <span>Envoyé automatiquement après les 24h sauf objection de votre part. Vous recevrez une copie par email.</span>
+          </div>
+        </div>
+        <div class="ea-next-step">
+          <div class="ea-next-step-num">4</div>
+          <div class="ea-next-step-content">
+            <strong>📞 Appel d'onboarding sous 48–72h</strong>
+            <span>Notre équipe vous contacte pour planifier le rendez-vous et activer votre compte avant le 30 juin 2026.</span>
+          </div>
+        </div>
+      </div>
+
+      <p style="color:var(--ink-2); font-size:.88rem; margin:18px 0;">
+        📩 Email envoyé à <strong style="color:var(--ink);" id="successEmail">jean@societe.be</strong>
+      </p>
+
+      <a href="#" class="ea-cta-btn" onclick="resetForm();return false;">← Retour au formulaire</a>
+    </div>
+
+    <div style="text-align:center; font-size:.78rem; color:var(--ink-3); margin-top:32px; line-height:1.7;">
+      <p style="margin:4px 0;"><strong style="color:var(--ink-2);">Aureus IA SPRL</strong> — BCE BE 1028.230.781</p>
+      <p style="margin:4px 0;">Sq. Eugène Plasky 92-94 bte 11, 1030 Schaerbeek · Matricule ONSS 66999-83</p>
+    </div>
+  </div>
+</div>
+
+<script src="assets/script.js"></script>
+<script>
+  const secretariatSelect = document.getElementById('secretariatSelect');
+  const secretariatOtherWrap = document.getElementById('secretariatOtherWrap');
+
+  secretariatSelect.addEventListener('change', () => {
+    secretariatOtherWrap.classList.toggle('visible', secretariatSelect.value === 'autre');
+  });
+
+  const consentCheckbox = document.getElementById('consentCheckbox');
+  const consentRow = document.getElementById('consentRow');
+  consentCheckbox.addEventListener('change', () => {
+    consentRow.classList.toggle('checked', consentCheckbox.checked);
+    if (consentCheckbox.checked) consentRow.classList.remove('has-error');
+  });
+
+  function toggleFaq(btn) {
+    const item = btn.closest('.ea-faq-item');
+    item.classList.toggle('open');
+  }
+
+  const form = document.getElementById('signupForm');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    document.querySelectorAll('.ea-field').forEach(f => f.classList.remove('has-error'));
+    consentRow.classList.remove('has-error');
+
+    const data = Object.fromEntries(new FormData(form));
+    let valid = true;
+    let firstError = null;
+
+    if (!data.fullName || data.fullName.trim().length < 2) {
+      document.getElementById('f-fullName').classList.add('has-error');
+      valid = false; firstError = firstError || 'f-fullName';
+    }
+    if (!data.email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
+      document.getElementById('f-email').classList.add('has-error');
+      valid = false; firstError = firstError || 'f-email';
+    }
+    if (!data.companyName || !data.companyName.trim()) {
+      document.getElementById('f-companyName').classList.add('has-error');
+      valid = false; firstError = firstError || 'f-companyName';
+    }
+    if (!data.currentSecretariat) {
+      document.getElementById('f-currentSecretariat').classList.add('has-error');
+      valid = false; firstError = firstError || 'f-currentSecretariat';
+    } else if (data.currentSecretariat === 'autre') {
+      if (!data.secretariatOther || !data.secretariatOther.trim()) {
+        document.getElementById('f-currentSecretariat').classList.add('has-error');
+        valid = false; firstError = firstError || 'f-currentSecretariat';
+      }
+    }
+    if (!data.consentMandate) {
+      consentRow.classList.add('has-error');
+      valid = false; firstError = firstError || 'consentRow';
+    }
+
+    if (!valid) {
+      const el = document.getElementById(firstError);
+      el && el.scrollIntoView({ behavior:'smooth', block:'center' });
+      return;
+    }
+
+    const btn = document.getElementById('submitBtn');
+    btn.disabled = true;
+    btn.textContent = '⏳ Inscription en cours...';
+
+    setTimeout(() => {
+      document.getElementById('successFirstName').textContent = data.fullName.split(' ')[0];
+      document.getElementById('successEmail').textContent = data.email;
+      document.getElementById('successNumber').textContent = '#0048';
+      const secLabel = data.currentSecretariat === 'autre' ? data.secretariatOther : data.currentSecretariat;
+      document.getElementById('successSecretariat').textContent = secLabel;
+
+      document.getElementById('formPage').style.display = 'none';
+      document.getElementById('successPage').classList.add('visible');
+      window.scrollTo(0,0);
+      startCountdown();
+    }, 800);
+  });
+
+  function startCountdown() {
+    let totalSeconds = 24 * 3600 - 18;
+    const el = document.getElementById('countdown');
+    const tick = () => {
+      const h = Math.floor(totalSeconds / 3600);
+      const m = Math.floor((totalSeconds % 3600) / 60);
+      const s = totalSeconds % 60;
+      el.textContent = `${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
+      totalSeconds--;
+    };
+    tick();
+    if (window._cdInterval) clearInterval(window._cdInterval);
+    window._cdInterval = setInterval(tick, 1000);
+  }
+
+  function resetForm() {
+    document.getElementById('successPage').classList.remove('visible');
+    document.getElementById('formPage').style.display = 'block';
+    form.reset();
+    secretariatOtherWrap.classList.remove('visible');
+    consentRow.classList.remove('checked');
+    if (window._cdInterval) clearInterval(window._cdInterval);
+    const btn = document.getElementById('submitBtn');
+    btn.disabled = false;
+    btn.innerHTML = '🔒 Réserver ma place — 4 mois gratuits + frais offerts';
+    window.scrollTo(0,0);
+  }
+</script>
+
+</body>
+</html>
